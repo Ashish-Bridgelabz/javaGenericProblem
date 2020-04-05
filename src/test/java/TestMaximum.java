@@ -5,63 +5,127 @@ public class TestMaximum {
     @Test
     public void givenThreeIntegerValue_FindMaximum_ShouldReturnMaximumValue_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        Integer maxInteger[] = {30, 20, 10};
-        Assert.assertEquals(maximum.maximumValue(maxInteger), maxInteger[0]);
+        Integer maximumValue = (Integer) maximum.findMaximum(11, 10, 9);
+        Assert.assertEquals((Integer) 11, maximumValue);
     }
 
     @Test
     public void givenThreeIntegerValue_FindMaximum_ShouldReturnMaximumValue2_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        Integer maxInteger[] = {20, 30, 10};
-        Assert.assertEquals(maximum.maximumValue(maxInteger), maxInteger[1]);
+        Integer maximumValue = (Integer) maximum.findMaximum(10, 11, 9);
+        Assert.assertEquals((Integer) 11, maximumValue);
     }
 
     @Test
     public void givenThreeIntegerValue_FindMaximum_ShouldReturnMaximumValue3_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        Integer maxInteger[] = {10, 20, 30};
-        Assert.assertEquals(maximum.maximumValue(maxInteger), maxInteger[2]);
+
+        Integer maximumValue = (Integer) maximum.findMaximum(10, 9, 11);
+        Assert.assertEquals((Integer) 11, maximumValue);
     }
 
     @Test
     public void givenThreeFloatValue_FindMaximum_ShouldReturnMaximumValue_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        Float maxFloat[] = { 13.210f,10.11f, 12.12f};
-        Assert.assertEquals(maximum.maximumValue(maxFloat), maxFloat[0]);
+        Float maximumValue = (Float) maximum.findMaximum(13.210f, 10.11f, 12.2f);
+        Assert.assertEquals((Float) 13.210f, maximumValue);
     }
 
     @Test
     public void givenThreeFloatValue_FindMaximum_ShouldReturnMaximumValue2_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        Float maxFloat[] = {10.11f, 13.210f,12.2f};
-        Assert.assertEquals(maximum.maximumValue(maxFloat), maxFloat[1]);
+        Float maximumValue = (Float) maximum.findMaximum(10.11f, 13.210f, 12.2f);
+        Assert.assertEquals((Float) 13.210f, maximumValue);
+
     }
 
     @Test
     public void givenThreeFloatValue_FindMaximum_ShouldReturnMaximumValue3_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        Float maxFloat[] = {10.11f, 12.12f, 13.210f};
-        Assert.assertEquals(maximum.maximumValue(maxFloat), maxFloat[2]);
+        Float maximumValue = (Float) maximum.findMaximum(10.11f, 12.2f, 13.210f);
+        Assert.assertEquals((Float) 13.210f, maximumValue);
     }
 
     @Test
     public void givenThreeString_FindMaximum_ShouldReturnMaximumString_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        String maxString[] = {"shyam", "abhi", "rahul"};
-        Assert.assertEquals(maximum.maximumValue(maxString), maxString[0]);
+        String maximumString = (String) maximum.findMaximum("shyam", "abhi", "rahul");
+        Assert.assertEquals("shyam", maximumString);
     }
 
     @Test
     public void givenThreeString_FindMaximum_ShouldReturnMaximumString2_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        String maxString[] = {"abhi","shyam", "rahul"};
-        Assert.assertEquals(maximum.maximumValue(maxString), maxString[1]);
+        String maximumString = (String) maximum.findMaximum("abhi", "shyam", "rahul");
+        Assert.assertEquals("shyam", maximumString);
     }
 
     @Test
     public void givenThreeString_FindMaximum_ShouldReturnMaximumString3_WithGenericMethod() {
         Maximum maximum = new Maximum();
-        String maxString[] = {"abhi","rahul","shyam"};
-        Assert.assertEquals(maximum.maximumValue(maxString), maxString[2]);
+        String maximumString = (String) maximum.findMaximum("rahul", "abhi", "shyam");
+        Assert.assertEquals("shyam", maximumString);
+    }
+
+    @Test
+    public void givenThreeIntegerValues_FindMaximum_ShouldReturnMaximumValue_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        Integer maximumValue = (Integer) maximum.findMaximum(11, 10, 9);
+        Assert.assertEquals((Integer) 11, maximumValue);
+    }
+
+    @Test
+    public void givenThreeIntegerValues_FindMaximum_ShouldReturnMaximumValue2_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        Integer maximumValue = (Integer) maximum.findMaximum(10, 11, 9);
+        Assert.assertEquals((Integer) 11, maximumValue);
+    }
+
+    @Test
+    public void givenThreeIntegerValues_FindMaximum_ShouldReturnMaximumValue3_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        Integer maximumValue = (Integer) maximum.findMaximum(10, 9, 11);
+        Assert.assertEquals((Integer) 11, maximumValue);
+    }
+
+    @Test
+    public void givenThreeFloatValue_FindMaximum_ShouldReturnMaximumValue_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        Float maximumValue = (Float) maximum.findMaximum(11.0f, 10.0f, 9.0f);
+        Assert.assertEquals((Float) 11.0f, maximumValue);
+    }
+
+    @Test
+    public void givenThreeFloatValue_FindMaximum_ShouldReturnMaximumValue2_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        Float maximumValue = (Float) maximum.findMaximum(10.0f, 11.0f, 9.0f);
+        Assert.assertEquals((Float) 11.0f, maximumValue);
+    }
+
+    @Test
+    public void givenThreeFloatValue_FindMaximum_ShouldReturnMaximumValue3_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        Float maximumValue = (Float) maximum.findMaximum(9.0f, 10.0f, 11.0f);
+        Assert.assertEquals((Float) 11.0f, maximumValue);
+    }
+
+    @Test
+    public void givenThreeString_FindMaximum_ShouldReturnMaximumString_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        String maximumString = (String) maximum.findMaximum("shyam", "abhi", "rahul");
+        Assert.assertEquals("shyam", maximumString);
+    }
+
+    @Test
+    public void givenThreeString_FindMaximum_ShouldReturnMaximumString2_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        String maximumString = (String) maximum.findMaximum("abhi", "shyam", "rahul");
+        Assert.assertEquals("shyam", maximumString);
+    }
+
+    @Test
+    public void givenThreeString_FindMaximum_ShouldReturnMaximumString3_WithGenericClass() {
+        Maximum maximum = new Maximum();
+        String maximumString = (String) maximum.findMaximum("abhi", "rahul", "shyam");
     }
 }
