@@ -1,28 +1,8 @@
 public class Maximum {
-    //FIND THREE MAXINTEGER VALUE
-    public static Integer maximumInteger(Integer[] maxInteger) {
-        Integer maximum = 0;
-        for (Integer index : maxInteger) {
-            if (index.compareTo(maximum) > 0)
-                maximum = index;
-        }
-        return maximum;
-    }
 
-    //FIND THREE MAXFLOATS VALUE
-    public static Float maximumFloat(Float[] maxFloat){
-        Float maximum = 0.0f;
-        for (Float index : maxFloat)  {
-            if (index.compareTo(maximum)>0)
-                maximum = index;
-        }
-        return maximum;
-    }
-
-    //FIND THREE MAXSTRING VALUE
-    public static String maximumString(String[] maxString) {
-        String maximum = " ";
-        for (String index : maxString) {
+    public static <E extends Comparable> E maximumValue(E[] maxInteger) {
+        E maximum = maxInteger[0];
+        for (E index : maxInteger) {
             if (index.compareTo(maximum) > 0)
                 maximum = index;
         }
