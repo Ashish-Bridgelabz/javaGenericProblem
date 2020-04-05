@@ -8,6 +8,7 @@ public class Maximum {
         }
         return maximum;
     }
+
     //FIND THREE MAXFLOATS VALUE
     public static Float maximumFloat(Float[] maxFloat){
         Float maximum = 0.0f;
@@ -18,5 +19,14 @@ public class Maximum {
         return maximum;
     }
 
+    //FIND THREE MAXSTRING VALUE
+    public static String maximumString(String[] maxString) {
+        String maximum = " ";
+        for (String index : maxString) {
+            if (index.compareTo(maximum) > 0)
+                maximum = index;
+        }
+        return maximum;
+    }
 }
 
