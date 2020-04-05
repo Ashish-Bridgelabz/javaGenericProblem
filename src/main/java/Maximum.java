@@ -9,7 +9,7 @@ public class Maximum<E extends Comparable<E>> {
     public Maximum() {
     }
 
-    //PARAMRTRIZED CONSTRUCTOR
+    //PARAMETRIZED CONSTRUCTOR
     public Maximum(E firstValue, E secondValue, E thirdValue) {
         this.firstValue = firstValue;
         this.secondValue = secondValue;
@@ -27,12 +27,13 @@ public class Maximum<E extends Comparable<E>> {
     }
 
 
-    // INTERNAL CALL FIND MAXIMUM NUMBER
+    // EXTEND MAX METHOD AND TAKE THREE PARAMETERS
     public <E extends Comparable<E>> E findMaximum() {
         printMax(findMaximum(firstValue, secondValue, thirdValue));
         return (E) findMaximum(firstValue, secondValue, thirdValue);
     }
 
+    //PRINT THE MAXIMUM
     public void printMax(E findMaximum) {
         System.out.println("Maximum is:" + findMaximum);
     }
