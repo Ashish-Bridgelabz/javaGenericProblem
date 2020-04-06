@@ -1,4 +1,3 @@
-//public class Maximum {
 
 public class Maximum<E extends Comparable<E>> {
     E firstValue;
@@ -26,7 +25,6 @@ public class Maximum<E extends Comparable<E>> {
             return thirdValue;
     }
 
-
     // EXTEND MAX METHOD AND TAKE THREE PARAMETERS
     public <E extends Comparable<E>> E findMaximum() {
         printMax(findMaximum(firstValue, secondValue, thirdValue));
@@ -38,4 +36,5 @@ public class Maximum<E extends Comparable<E>> {
         System.out.println("Maximum is:" + findMaximum);
     }
 }
+
 
